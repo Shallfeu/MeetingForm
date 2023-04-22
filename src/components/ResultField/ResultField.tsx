@@ -16,6 +16,7 @@ export const ResultField: React.FC<ResultFieldProps> = (props) => {
     return (
         <div className="result">
             <h2>Рассчет</h2>
+
             <ul className="result__list">
                 <li className="result__item">
                     Зарплата в месяц: <span>{salary}</span>
