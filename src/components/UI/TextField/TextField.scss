@@ -1,0 +1,57 @@
+@import '../../../assets/styles/variables.scss';
+
+.input-light {
+    &__area {
+        position: relative;
+
+        span {
+            position: absolute;
+            left: 0;
+            padding: 10px;
+            color: #8f8f8f;
+            pointer-events: none;
+            letter-spacing: 0.05em;
+            transition: 0.5s;
+        }
+    }
+
+    &__box {
+        width: 300px;
+        height: 30px;
+        padding: 20px 10px;
+        border: none;
+        outline: none;
+        background: transparent;
+        font-size: 1em;
+        letter-spacing: 0.05em;
+        border-bottom: 2px solid $blue;
+    }
+}
+
+.input-dark {
+    &__area {
+        position: relative;
+
+        span {
+            position: absolute;
+            left: 0;
+            padding: 10px;
+            color: #8f8f8f;
+            pointer-events: none;
+            letter-spacing: 0.05em;
+            transition: 0.5s;
+        }
+    }
+
+    &__box {
+        width: 300px;
+        height: 30px;
+        padding: 20px 10px;
+        border: none;
+        outline: none;
+        background: transparent;
+        font-size: 1em;
+        letter-spacing: 0.05em;
+        border-bottom: 2px solid $error-ligth;
+    }
+}
