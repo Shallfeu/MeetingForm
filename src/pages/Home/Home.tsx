@@ -3,7 +3,7 @@ import React, { useContext, useState } from 'react';
 import { DateForm } from '../../components/DateForm/DateForm';
 import { ResultField, ResultFieldProps } from '../../components/ResultField/ResultField';
 // Utils
-import { calculateMoneyInHour } from '../../helpers/calculateMoneyInHour';
+import { HelperProps, calculateMoneyInHour } from '../../helpers/calculateMoneyInHour';
 import { ThemeContext } from '../../App';
 // Styles
 import './Home.scss';
@@ -13,7 +13,7 @@ export const Home: React.FC = () => {
 
     const [data, setData] = useState<ResultFieldProps | null>(null);
 
-    const handleCalculateResult = async (payload: { date: string; salary: number; hours: number }) => {
+    const handleCalculateResult = async (payload: HelperProps) => {
         const result: ResultFieldProps = await calculateMoneyInHour(payload);
         setData(() => result);
     };

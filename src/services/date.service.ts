@@ -1,8 +1,10 @@
 const baseUrl = 'https://isdayoff.ru/api/getdata';
 
 const dateService = {
-    getMonthDate: async (params: { year: string; month: string }): Promise<string> => {
-        const requestUrl = `${baseUrl}?year=${params.year}&month=${params.month}&pre=1`;
+    getMonthDate: async (params: { year: string; sd: boolean; month: string; country: string }): Promise<string> => {
+        const { year, sd, month, country } = params;
+
+        const requestUrl = `${baseUrl}?year=${year}&month=${month}&cc=${country}&sd=${sd ? 1 : 0}`;
 
         const data =
             (await fetch(requestUrl)

@@ -1,0 +1,22 @@
+@import '../../../assets/styles/variables.scss';
+
+.select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__form {
+        margin-left: 20px;
+        padding: 0.6rem;
+
+        font-size: 1rem;
+        font-weight: 700;
+        color: $secondary;
+
+        border: 3px solid $primary;
+        border-radius: 1rem;
+    }
+
+    &__label {
+    }
+}

@@ -1,0 +1,31 @@
+@import '../../../assets/styles/variables.scss';
+
+.check-light {
+    &__input {
+        width: 40px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    &__box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $blue;
+    }
+}
+
+.check-dark {
+    &__input {
+        width: 40px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    &__box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $error-ligth;
+    }
+}

@@ -33,6 +33,7 @@
     }
 
     &--dark {
+        background: $secondary;
         border: 5px solid $blue;
     }
 }
