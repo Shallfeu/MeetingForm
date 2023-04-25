@@ -1,4 +1,6 @@
-const baseUrl = 'https://isdayoff.ru/api/getdata';
+import config from '../config.json';
+
+const baseUrl = config.apiEndPoint + '/getdata';
 
 const dateService = {
     getMonthDate: async (params: { year: string; sd: boolean; month: string; country: string }): Promise<string> => {

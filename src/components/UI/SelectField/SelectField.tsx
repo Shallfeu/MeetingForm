@@ -9,13 +9,13 @@ type SelectFieldProps = {
     defaultOption?: string;
     options: { label: string; value: string }[];
     error: string | null;
-    onChange: (e: any) => void;
+    onChange: (e: { name: string; value: string }) => void;
 };
 
 const SelectField: React.FC<SelectFieldProps> = ({ label, value, onChange, defaultOption, options, name, error }) => {
     const [touched, setTouched] = useState(false);
 
-    const handleChange = ({ target }: any) => {
+    const handleChange = ({ target }: React.ChangeEvent<HTMLSelectElement>) => {
         onChange({ name: target.name, value: target.value });
     };
 

@@ -7,13 +7,13 @@ type DatePickerProps = {
     name: string;
     value: string;
     error: string | null;
-    onChange: (e: any) => void;
+    onChange: (e: { name: string; value: string }) => void;
 };
 
 export const DatePicker: React.FC<DatePickerProps> = ({ label, name, value, error, onChange }) => {
     const [touched, setTouched] = useState(false);
 
-    const handleChange = ({ target }: any) => {
+    const handleChange = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
         onChange({ name: target.name, value: target.value });
     };
 

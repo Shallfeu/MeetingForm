@@ -9,7 +9,7 @@ type TextFieldProps = {
     name: string;
     value: string;
     error: string | null;
-    onChange: (e: any) => void;
+    onChange: (e: { name: string; value: string }) => void;
 };
 
 export const TextField: React.FC<TextFieldProps> = ({ type = 'text', name, label, value, error, onChange }) => {
@@ -17,7 +17,7 @@ export const TextField: React.FC<TextFieldProps> = ({ type = 'text', name, label
 
     const theme = useContext(ThemeContext);
 
-    const handleChange = ({ target }: any) => {
+    const handleChange = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
         onChange({ name: target.name, value: target.value });
     };
 

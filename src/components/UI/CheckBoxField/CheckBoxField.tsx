@@ -6,7 +6,7 @@ import './CheckBoxField.scss';
 type CheckBoxFieldProps = {
     name: string;
     value: boolean;
-    onChange: (e: any) => void;
+    onChange: (e: { name: string; value: boolean }) => void;
     label: string;
     error?: string | null;
 };

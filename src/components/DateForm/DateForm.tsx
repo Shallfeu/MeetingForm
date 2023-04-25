@@ -24,7 +24,7 @@ interface Error extends CommonData {
 }
 
 interface DateFormProps {
-    onSubmit: (e: any) => void;
+    onSubmit: (e: Data) => void;
 }
 
 const initialData: Data = {
@@ -91,7 +91,7 @@ export const DateForm = React.memo<DateFormProps>(({ onSubmit }) => {
         date: 'Поле не должно быть пустым',
     };
 
-    const handleChange = useCallback((target: { name: string; value: string }) => {
+    const handleChange = useCallback((target: { name: string; value: string | boolean }) => {
         setData((prevState: Data) => ({
             ...prevState,
             [target.name]: target.value,
