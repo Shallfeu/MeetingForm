@@ -1,12 +1,14 @@
 @import '../../../assets/styles/variables.scss';
 
 .select {
+    width: 100%;
+
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
 
     &__form {
-        margin-left: 20px;
+        width: 100%;
         padding: 0.6rem;
 
         font-size: 1rem;
@@ -18,5 +20,6 @@
     }
 
     &__label {
+        width: 100%;
     }
 }

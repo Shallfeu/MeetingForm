@@ -22,7 +22,7 @@ export const DatePicker: React.FC<DatePickerProps> = ({ label, name, value, erro
             {label}
             <input
                 id={name}
-                type="month"
+                type="date"
                 name={name}
                 onChange={handleChange}
                 value={value}

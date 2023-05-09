@@ -1,9 +1,7 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 // Components
-import { DateForm } from '../../components/DateForm/DateForm';
-import { ResultField, ResultFieldProps } from '../../components/ResultField/ResultField';
+import { DateForm } from '../../components/Form/TheForm';
 // Utils
-import { HelperProps, calculateMoneyInHour } from '../../helpers/calculateMoneyInHour';
 import { ThemeContext } from '../../App';
 // Styles
 import './Home.scss';
@@ -11,23 +9,18 @@ import './Home.scss';
 export const Home: React.FC = () => {
     const theme = useContext(ThemeContext);
 
-    const [data, setData] = useState<ResultFieldProps | null>(null);
-
-    const handleCalculateResult = async (payload: HelperProps) => {
-        const result: ResultFieldProps = await calculateMoneyInHour(payload);
-        setData(() => result);
+    const handleCalculateResult = async (payload: any) => {
+        console.log(payload);
     };
 
     return (
         <div className={`home home--${theme}`}>
             <div className="home__box">
-                <h1 className="home__title">Расчет стоимости часа работы</h1>
+                <h1 className="home__title">Meeting Form</h1>
 
                 <div className="home__form">
                     <DateForm onSubmit={handleCalculateResult} />
                 </div>
-
-                <div className="home__result">{data && <ResultField {...data} />}</div>
             </div>
         </div>
     );

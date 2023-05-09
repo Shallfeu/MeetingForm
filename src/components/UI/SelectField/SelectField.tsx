@@ -19,9 +19,6 @@ const SelectField: React.FC<SelectFieldProps> = ({ label, value, onChange, defau
         onChange({ name: target.name, value: target.value });
     };
 
-    const optionsArray: { label: string; value: string }[] =
-        !Array.isArray(options) && typeof options === 'object' ? Object.values(options) : options;
-
     return (
         <div className="select">
             <label htmlFor={name} className="select__label">
@@ -39,8 +36,8 @@ const SelectField: React.FC<SelectFieldProps> = ({ label, value, onChange, defau
                         {defaultOption}
                     </option>
 
-                    {optionsArray &&
-                        optionsArray.map((option) => (
+                    {options &&
+                        options.map((option) => (
                             <option key={option.value} value={option.value}>
                                 {option.label}
                             </option>
